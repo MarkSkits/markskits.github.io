@@ -2,11 +2,13 @@
     <head>
         <title>Galaxy Shop</title>
         <style>
+            body {
+                background: rgb(64, 64, 64) !important;
+            }
             .content {
                 height: 100%;
                 width: 100%;
                 font-family: Arial;
-                background: rgb(64, 64, 64);
                 padding-left: 2vh;
                 padding-right: 2vh;
             }
@@ -40,7 +42,11 @@
                 padding-right: 2vh;
             }
             .computer {
-                text-align: center;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+                max-height: 100%;
             }
         </style>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -64,14 +70,14 @@
             <div class="text">
                 <p style="text-align: center; font-size: 4vh">Welcome to the Galaxy Shop!</p>
             </div>
-            <div id="lowend" class="computer">
+            <div id="lowend">
                 <img class="computer" src="https://markskits.github.io/GalaxyIndustries/Resources/Low-End.png"></img>
             </div>
-            <div id="midend" class="computer">
-                <img src="https://markskits.github.io/GalaxyIndustries/Resources/Mid-End.png"></img>
+            <div id="midend">
+                <img class="computer" src="https://markskits.github.io/GalaxyIndustries/Resources/Mid-End.png"></img>
             </div>
-            <div id="highend" class="computer">
-                <img src="https://markskits.github.io/GalaxyIndustries/Resources/High-End.png"></img>
+            <div id="highend">
+                <img class="computer" src="https://markskits.github.io/GalaxyIndustries/Resources/High-End.png"></img>
             </div>
         </div>
     </body>
