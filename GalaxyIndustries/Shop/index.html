@@ -56,6 +56,9 @@
         <script>
             function viewlow() {
                 document.getElementById('lowendspecs').style.display = "block";
+                $('html, body').animate({
+                    scrollTop: $("#lowendspecs").offset().top
+                }, 2000);
             };
         </script>    
     </head>
