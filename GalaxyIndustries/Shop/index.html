@@ -55,7 +55,31 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <script>
             function viewlow() {
-                document.getElementById('lowendspecs').style.display = "block";
+                if(document.getElementById('lowendspecs').style.display == "none") {
+                    document.getElementById('lowendspecs').style.display = "block";
+                    document.getElementById('vlbtn').innerHTML = 'Hide Details';
+                } else {
+                    document.getElementById('lowendspecs').style.display = "none";
+                    document.getElementById('vlbtn').innerHTML = 'View Details';
+                }
+            };
+            function viewmid() {
+                if(document.getElementById('midendspecs').style.display == "none") {
+                    document.getElementById('midendspecs').style.display = "block";
+                    document.getElementById('vmbtn').innerHTML = 'Hide Details';
+                } else {
+                    document.getElementById('midendspecs').style.display = "none";
+                    document.getElementById('vmbtn').innerHTML = 'View Details';
+                }
+            };
+            function viewhigh() {
+                if(document.getElementById('highendspecs').style.display == "none") {
+                    document.getElementById('highendspecs').style.display = "block";
+                    document.getElementById('vhbtn').innerHTML = 'Hide Details';
+                } else {
+                    document.getElementById('highendspecs').style.display = "none";
+                    document.getElementById('vhbtn').innerHTML = 'View Details';
+                }
             };
         </script>    
     </head>
@@ -79,33 +103,54 @@
                 <p style="font-size: 3vh;">Low-End PC for $699.99</p>
                 <img class="computer" src="https://markskits.github.io/GalaxyIndustries/Resources/Low-End.png"></img>
                 <p></p>
-                <button class="btn btn-primary btn-block btn-lg" style="font-size: 3vh;" onclick="viewlow()">View Details</button>
-                <p></p>
                 <div id="lowendspecs" style="display: none;">
                     <p style="font-size: 3vh">Specifications</p>
                     <ul style="text-align: left; font-size: 2.5vh">
-                        <li>AMD Ryzen 3 3600 (3.6GHz)</li>
+                        <li>AMD Ryzen 3 3200G (3.6GHz)</li>
                         <li>8GB DDR4 RAM (3000Mhz)</li>
                         <li>1TB HDD (7200RPM)</li>
                         <li>GTX 1650 (4GB VRAM)</li>
                         <li>Windows 10 Home</li>
                     </ul>
                 </div>
+                <button class="btn btn-primary btn-block btn-lg" style="font-size: 3vh;" onclick="viewlow()" id="vlbtn">View Details</button>
+                <p></p>
             </div>
             <div id="midend" style="color: white; text-align: center;">
-                <p style="font-size: 3vh;">Mid-End PC</p>
+                <p style="font-size: 3vh;">Mid-End PC for $899.99</p>
                 <img class="computer" src="https://markskits.github.io/GalaxyIndustries/Resources/Mid-End.png"></img>
                 <p></p>
-                <button class="btn btn-primary btn-block btn-lg" style="font-size: 3vh;" onclick="viewmid()">View Details</button>
+                <div id="midendspecs" style="display: none;">
+                    <p style="font-size: 3vh">Specifications</p>
+                    <ul style="text-align: left; font-size: 2.5vh">
+                        <li>AMD Ryzen 5 2600 (3.4GHz)</li>
+                        <li>16GB DDR4 RAM (3200Mhz)</li>
+                        <li>500GB SSD (M.2)</li>
+                        <li>GTX 1660 (6GB VRAM)</li>
+                        <li>Windows 10 Home</li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary btn-block btn-lg" style="font-size: 3vh;" onclick="viewmid()" id="vmbtn">View Details</button>
                 <p></p>            
             </div>
             <div id="highend" style="color: white; text-align: center;">
-                <p style="font-size: 3vh;">High-End PC</p>
+                <p style="font-size: 3vh;">High-End PC for $1,749.99</p>
                 <img class="computer" src="https://markskits.github.io/GalaxyIndustries/Resources/High-End.png"></img>
                 <p></p>
-                <button class="btn btn-primary btn-block btn-lg" style="font-size: 3vh;" onclick="viewhigh()">View Details</button>
-                <p></p>
+                <div id="highendspecs" style="display: none;">
+                    <p style="font-size: 3vh">Specifications</p>
+                    <ul style="text-align: left; font-size: 2.5vh">
+                        <li>AMD Ryzen 7 3700X (3.6GHz)</li>
+                        <li>32GB DDR4 RAM (3200Mhz)</li>
+                        <li>1TB SSD (M.2)</li>
+                        <li>2TB HDD (7200RPM)</li>
+                        <li>RTX 2070 (8GB VRAM)</li>
+                        <li>Windows 10 Pro</li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary btn-block btn-lg" style="font-size: 3vh;" onclick="viewhigh()" id="vhbtn">View Details</button>
             </div>
+            <p>&nbsp;</p>
         </div>
     </body>
 </html>
